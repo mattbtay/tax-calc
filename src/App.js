@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Container, Row, Col, Navbar, Form } from "react-bootstrap";
+import money from "money-math";
 import "./bootstrap.min.css";
 import "./App.css";
 
@@ -8,8 +9,27 @@ function App() {
 
   const textInput = useRef(null);
 
+  function taxAmt() {
+    return value * 0.3;
+  }
+
+  function zAmt() {
+    return value * 0.7 * 0.1;
+  }
+
+  function tAmt() {
+    return value * 0.7 * 0.1;
+  }
+
+  function savingsAmt() {
+    return value * 0.7 - (value * 0.7 * 0.1 + value * 0.7 * 0.1);
+  }
+
   function setAmount() {
-    var toCents = textInput.current.value;
+    var toNum = textInput.current.value;
+
+    var toCents = toNum;
+
     setValue(toCents);
   }
 
@@ -34,22 +54,19 @@ function App() {
               </Col>
               <Col md={12}>
                 <label htmlFor="">Amount to tax account</label>
-                <Form.Control readOnly value={value * 0.3} />
+                <Form.Control readOnly value={taxAmt()} />
               </Col>
               <Col md={12}>
                 <label htmlFor="">Amount Z personal</label>
-                <Form.Control readOnly value={value * 0.7 * 0.1} />
+                <Form.Control readOnly value={zAmt()} />
               </Col>
               <Col md={12}>
                 <label htmlFor="">Amount to T personal</label>
-                <Form.Control readOnly value={value * 0.7 * 0.1} />
+                <Form.Control readOnly value={tAmt()} />
               </Col>
               <Col md={12}>
                 <label htmlFor="">Amount to Savings</label>
-                <Form.Control
-                  readOnly
-                  value={value * 0.7 - (value * 0.7 * 0.1 + value * 0.7 * 0.1)}
-                />
+                <Form.Control readOnly value={savingsAmt()} />
               </Col>
             </Row>
           </Container>

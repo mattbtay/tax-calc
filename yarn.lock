@@ -5615,6 +5615,11 @@ js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.9.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+jsbn@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-1.1.0.tgz#b01307cb29b618a1ed26ec79e911f803c4da0040"
+  integrity sha1-sBMHyym2GKHtJux56RH4A8TaAEA=
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -6259,6 +6264,13 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+money-math@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/money-math/-/money-math-2.5.1.tgz#9dd5a329b1f6a21fce7e3d2a3a705c23b56b7cf9"
+  integrity sha1-ndWjKbH2oh/Ofj0qOnBcI7VrfPk=
+  dependencies:
+    jsbn "^1.1.0"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
