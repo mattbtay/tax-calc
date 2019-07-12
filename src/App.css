@@ -21,3 +21,9 @@ div.App {
 .form-wrap {
   width: 100%;
 }
+
+.shameless-plug {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+}

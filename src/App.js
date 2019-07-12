@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { Container, Row, Col, Navbar, Form } from "react-bootstrap";
-import money from "money-math";
 import "./bootstrap.min.css";
 import "./App.css";
 
@@ -47,7 +46,7 @@ function App() {
                 <Form.Control
                   key="input-value"
                   ref={textInput}
-                  type="text"
+                  type="number"
                   placeholder="$100.00"
                   onChange={() => setAmount()}
                 />
@@ -71,6 +70,22 @@ function App() {
             </Row>
           </Container>
         </div>
+      </div>
+      <div className="shameless-plug">
+        <Container>
+          <Row>
+            <Col md={12}>
+              If the math is bad, don't blame me ;) <br />
+              <a
+                href="http://twitter.com/mattbtay"
+                target="_blank"
+                rel="noopener"
+              >
+                @mattbtay
+              </a>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div>
   );
